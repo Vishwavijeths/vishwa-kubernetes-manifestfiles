@@ -11,7 +11,7 @@ spec:
   template: # it defines which application that we have to deploy in a cluster
     metadata:
       labels:
-        key: cart
+        web: cart
     spec:
       containers:
         - name: cart-container
