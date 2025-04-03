@@ -1,0 +1,22 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cart-page-rs
+  namespace: vishwa
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      web: cart
+  template: # it defines which application that we have to deploy in a cluster
+    metadata:
+      labels:
+        web: cart
+    spec:
+      containers:
+        - name: cart-container
+        #image:
+          image: muralisocial123/cart-page-test:1.0
+
+          ports:
+              - containerPort: 3000
