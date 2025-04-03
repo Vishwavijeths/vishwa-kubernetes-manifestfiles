@@ -1,5 +1,4 @@
-apiversion: apps/v1
-
+apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
   name: cart-page-rs
@@ -20,4 +19,4 @@ spec:
           image: muralisocial123/cart-page-test:1.0
 
           ports:
-          -containerport: 3000
+              - containerPort: 3000
